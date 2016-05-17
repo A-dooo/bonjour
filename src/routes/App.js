@@ -17,11 +17,9 @@ import * as fnObj from "../actions/index.js";
 // 	}
 // }
 
-//function mapDispatchToProps(dispatch) {
- // return bindActionCreators({onAdd}, dispatch)
-//}
 
 export default connect(state => ({
-	num:state.add
+	num:state.add.num,
+	name:state.add.name?state.add.name:"asdf"
 }),fnObj)(Index)
 

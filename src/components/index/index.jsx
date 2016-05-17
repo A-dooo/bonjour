@@ -8,11 +8,12 @@ export default class Index extends Component{
         super(props);
     }
 	render(){
+		const { onAdd,num,onSubtract,name } = this.props;
 		console.log(this.props)
-		const { onAdd,num,onSubtract } = this.props;
 		return <div>
 			<p>{num}</p>
-			<p className="dfgh"  onClick={onAdd}>ADD </p>
+			<p>{name}</p>
+			<p className="abcd"  onClick={onAdd}>add </p>
 			<p onClick={onSubtract}> subtract</p>
 			<div>
 				<Link to="/about">about</Link>

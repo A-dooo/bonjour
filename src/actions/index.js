@@ -6,6 +6,10 @@ export function onAdd(){
 
 export function onSubtract(){
 	return{
-		type:'SUBTRACT'
+		type:'SUBTRACT',
+		data:{
+			time:1,
+			name:'zhangsan'
+		}
 	}
 }

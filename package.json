@@ -28,7 +28,7 @@
     "url-loader": "^0.5.7"
   },
   "scripts": {
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base dist",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "babel": {

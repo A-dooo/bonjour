@@ -10,25 +10,17 @@ import Error from './src/components/Error/error.jsx';
 import ReactDom from "react-dom";
 const store = configureSrore(rootReducer);
 
-export default class Root extends Component {
-
-	render() {
-		return (
-			<Provider store={store}>			
-				<Router  history={hashHistory}>
-					<Route  path="/" component={App}>  
-						<IndexRoute component={First}/>
-						<Route path="/about" component ={About} />
-					</Route>
-					<Route path="*"  component ={Error} />
-				</Router>
-			</Provider>
-		)
-	}
-}
 
 
-ReactDom.render(
-  <Root {...{ history }} />,
-  document.getElementById('container')
-);
+
+ReactDom.render((
+  	<Provider store={store}>			
+		<Router  history={hashHistory}>
+			<Route  path="/" component={App}>  
+				<IndexRoute component={First}/>
+				<Route path="/about" component ={About} />
+			</Route>
+			<Route path="*"  component ={Error} />
+		</Router>
+	</Provider>
+), document.getElementById('container'))
