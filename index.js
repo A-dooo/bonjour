@@ -13,14 +13,31 @@ const store = configureSrore(rootReducer);
 
 
 
+
+
+const routerConfig=[
+	{
+		path:'/',
+		component:App,
+		indexRoute:{
+			component:First 
+		},
+		childRoutes:[
+      		{
+      			path:'about',
+      			component:About
+      		}
+    	]
+	},
+	{
+		path:"*",
+		component:Error
+	}
+
+]
+
 ReactDom.render((
   	<Provider store={store}>			
-		<Router  history={hashHistory}>
-			<Route  path="/" component={App}>  
-				<IndexRoute component={First}/>
-				<Route path="/about" component ={About} />
-			</Route>
-			<Route path="*"  component ={Error} />
-		</Router>
+		<Router  history={hashHistory} routes={routerConfig} />
 	</Provider>
 ), document.getElementById('container'))
