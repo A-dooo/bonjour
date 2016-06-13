@@ -1,15 +1,20 @@
 export function onAdd(){
-	return{
-		type:'ADD'
+	return dispatch => {
+		dispatch({
+			type: 'ADD'
+		})
 	}
 }
 
 export function onSubtract(){
-	return{
-		type:'SUBTRACT',
-		data:{
-			time:1,
-			name:'zhangsan'
-		}
+	// alert(6666)
+	return dispatch => {
+		dispatch({		
+			type:'SUBTRACT',
+			data:{
+				time:1,
+				name:'zhangsan'
+			}
+		})
 	}
 }
